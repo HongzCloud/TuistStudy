@@ -2,6 +2,9 @@ import ProjectDescription
 
 let project = Project(
     name: "TuistStudy",
+    settings: .settings(configurations: [.debug(name: .debug),
+                                         .release(name: .release),
+                                         .debug(name: "QA")]),
     targets: [
         .target(
             name: "TuistStudy",
