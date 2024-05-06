@@ -30,5 +30,15 @@ let project = Project(
             resources: [],
             dependencies: [.target(name: "TuistStudy")]
         ),
+    ],
+    schemes: [
+        .scheme(
+           name: "TuistStudy-Dev",
+           buildAction: .buildAction(targets: [.target("TuistStudy")]),
+           runAction: .runAction(configuration: .debug),
+           archiveAction: .archiveAction(configuration: .debug),
+           profileAction: .profileAction(configuration: .debug),
+           analyzeAction: .analyzeAction(configuration: .debug)
+         ),
     ]
 )
